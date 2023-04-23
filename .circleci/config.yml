@@ -1,4 +1,7 @@
 version: 2.1 
+
+ 
+
 jobs: 
 
   build-and-test:  
@@ -6,6 +9,9 @@ jobs:
     machine: 
 
       image: ubuntu-2004:202104-01 
+
+        
+
     steps: 
 
       - checkout 
@@ -13,6 +19,7 @@ jobs:
       - run: make deps 
       - run: make lint
       - run: make test       
+
 workflows: 
 
   basic:  
